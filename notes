@@ -1,0 +1,20 @@
+for frontend: ng new inventory-frontend
+
+
+
+for backend: npm init -y
+npm install express body-parser mysql --save
+npm install express-list-endpoints --save
+npm install rootpath cors --save
+
+npm install nodemon -g
+nodemon server.js
+
+db identifier inventory-db
+inventory.cyeqtwmo7agm.eu-west-2.rds.amazonaws.com
+root/mynameisroot
+
+
+https://jsonworld.com/demo/angular-7-crud-with-nodejs-and-mysql
+https://jasonwatmore.com/post/2018/09/24/nodejs-basic-authentication-tutorial-with-example-api
+https://medium.com/code-divoire/creation-of-web-application-with-node-js-et-angular-v6-part-1-backend-4c90eb79090?
