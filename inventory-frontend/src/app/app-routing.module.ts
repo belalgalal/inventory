@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', component: ProductListComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'details/:id', component: ProductDetailsComponent, canActivate: [AuthGuard] },
-  { path: 'add', component: AddProductComponent },
+  { path: 'add', component: AddProductComponent, canActivate: [AuthGuard] },
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }
