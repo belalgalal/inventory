@@ -52,4 +52,19 @@ router.delete('/:id', function (req, res) {
     });
 });
 
+router.put('/:id', function (req, res) {
+    if(req.body.constructor === Object && Object.keys(req.body).length === 0) {
+        res.status(400).json({message: 'Product data is not correct'});
+    }
+    productService.updateProduct(req.params.id, req.body,function(err,result){
+        if(err)
+        {
+            res.status(400).json(err);
+        }
+        else {
+            res.json({'id': req.params.id, ...req.body});
+        }
+    });
+});
+
 module.exports = router;

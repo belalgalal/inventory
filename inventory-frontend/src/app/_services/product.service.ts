@@ -24,4 +24,8 @@ export class ProductService {
     addProduct(product: Product) {
         return this.http.post<Product>(`${environment.apiUrl}/products`, product);
     }
+
+    updateProduct(id: number, product: Product) {
+        return this.http.put(`${environment.apiUrl}/products/${id}`, product);
+    }
 }

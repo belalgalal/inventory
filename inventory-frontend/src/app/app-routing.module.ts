@@ -5,12 +5,14 @@ import { ProductListComponent } from './product-list';
 import { LoginComponent } from './login';
 import { AuthGuard } from './_helpers';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 import { AddProductComponent } from './add-product/add-product.component';
 
 const routes: Routes = [
   { path: '', component: ProductListComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'details/:id', component: ProductDetailsComponent, canActivate: [AuthGuard] },
+  { path: 'update/:id', component: UpdateProductComponent },
   { path: 'add', component: AddProductComponent, canActivate: [AuthGuard] },
 
   // otherwise redirect to home

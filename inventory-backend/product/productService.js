@@ -12,6 +12,9 @@ var productService = {
     },
     deleteProduct: function (id, callback) {
         return db.query('DELETE FROM product WHERE id = ?', [id], callback);
+    },
+    updateProduct(id, product, callback) {
+        return db.query('UPDATE product SET title = ?, description = ?, price = ?, quantity = ? WHERE id = ?', [product.title, product.description, product.price, product.quantity, id], callback);
     }
 }
 

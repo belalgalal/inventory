@@ -1,1 +1,42 @@
-<p>update-product works!</p>
+<<div class="card mt-4">
+    <h4 class="card-header">Welcome to the inventory!</h4>
+    <div class="card-body">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h6>Update Product</h6>
+            </div>
+            <hr />
+            <div class="panel-body">
+                <div [hidden]="submitted" style="width: 400px;">
+                    <form (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                            <label for="name">Title</label>
+                            <input type="text" class="form-control" id="title" required [(ngModel)]="product.title"
+                                name="title">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Description</label>
+                            <input type="text" class="form-control" id="description" required
+                                [(ngModel)]="product.description" name="description">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Price</label>
+                            <input type="text" class="form-control" id="price" required [(ngModel)]="product.price"
+                                name="price">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Quantity</label>
+                            <input type="text" class="form-control" id="quantity" required
+                                [(ngModel)]="product.quantity" name="quantity">
+                        </div>
+
+                        <button type="submit" class="btn btn-success">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
