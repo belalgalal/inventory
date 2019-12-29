@@ -12,11 +12,13 @@ export class UpdateProductComponent implements OnInit {
 
   id: number;
   product: Product;
+  submitted = false;
 
   constructor(private route: ActivatedRoute,private router: Router,
     private productService: ProductService) { }
 
   ngOnInit() {
+    this.submitted = false;
     this.product = new Product();
 
     this.id = this.route.snapshot.params['id'];
@@ -36,6 +38,7 @@ export class UpdateProductComponent implements OnInit {
   }
 
   onSubmit() {
+    this.submitted = true;
     this.updateProduct();    
   }
 
