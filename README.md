@@ -28,17 +28,34 @@ $ git clone https://github.com/belalgalal/inventory.git
     "e2e": "ng e2e"
   }
 ```
-5. Run `inventory-backend`
+5. Point to the local DB in `inventory-backend/db.js`
+6. Run `inventory-backend`
 ```sh
 $ cd inventory-backend
 $ node server.js
 ```
-6. Run `inventory-frontend`
+7. Run `inventory-frontend`
 ```sh
 $ cd inventory-frontend
 $ ng serve
 ```
-7. Open http://localhost:4200 and login with belal/belal
+8. Open http://localhost:4200 and login with belal/belal
+
+## Running Locally using Docker
+1. Follow the points above from #1 to #5
+2. Build `inventory-backend` image
+```sh
+$ cd inventory-backend
+$ docker build -t inventory-backend
+$ docker run -d -p 3000:3000 inventory-backend
+```
+3. Build `inventory-frontend` image
+```sh
+$ cd inventory-frontend
+$ docker build -t inventory-frontend
+$ docker run -d -p 8080:80 inventory-frontend
+```
+4. Open http://localhost:8080 and login with belal/belal
 
 ## AWS Deployment
 The following topology diagram illustrates the deployment for the application on AWS.
