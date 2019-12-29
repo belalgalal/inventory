@@ -45,11 +45,13 @@ $ ng serve
 1. Follow the points above from #1 to #5
 2. Build `inventory-backend` image
 ```sh
+$ cd inventory-backend
 $ docker build -t inventory-backend
 $ docker run -d -p 3000:3000 inventory-backend
 ```
 3. Build `inventory-frontend` image
 ```sh
+$ cd inventory-frontend
 $ docker build -t inventory-frontend
 $ docker run -d -p 8080:80 inventory-frontend
 ```
